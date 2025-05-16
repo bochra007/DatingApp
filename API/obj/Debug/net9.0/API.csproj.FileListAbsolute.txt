@@ -73,3 +73,4 @@ C:\ProjetsTest\DatingApp\demo\API\bin\Debug\net9.0\Microsoft.AspNetCore.Authenti
 C:\ProjetsTest\DatingApp\demo\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
 C:\ProjetsTest\DatingApp\demo\API\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\ProjetsTest\DatingApp\demo\API\obj\Debug\net9.0\API.sourcelink.json
+C:\ProjetsTest\DatingApp\demo\API\bin\Debug\net9.0\Data\UserSeedData.json

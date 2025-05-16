@@ -26,8 +26,6 @@ export class NavComponent {
       }, 
        error : error => this.toastr.error(error.error)
     });
-   
-
   }
 
   logout(){
