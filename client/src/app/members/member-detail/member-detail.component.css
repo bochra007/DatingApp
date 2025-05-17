@@ -1,0 +1,29 @@
+.member-detail-card {
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #fff, #fdf1f3);
+
+  img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  ul {
+    padding-left: 0;
+  }
+
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .col-md-5,
+    .col-md-7 {
+      width: 100%;
+    }
+  }
+}
+
+.text-pink {
+  color: #ff5e9c;
+}

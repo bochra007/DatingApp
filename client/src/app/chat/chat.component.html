@@ -1,0 +1,29 @@
+<div class="container py-4">
+  <div class="card shadow chat-box border-0">
+    <div class="card-header bg-light d-flex align-items-center">
+      <img [src]="member?.photoUrl || 'assets/default-profile.jpg'" class="rounded-circle me-3" width="50" height="50">
+      <h5 class="mb-0">{{ member?.username }}</h5>
+    </div>
+
+    <div class="card-body chat-messages px-4 py-3" id="chatBody">
+      <div *ngFor="let msg of messages">
+        <div []="{'chat-message me': msg.sender === 'me', 'chat-message other': msg.sender !== 'me'}">
+          <div class="message-bubble">
+            <span>{{ msg.text }}</span>
+            <small class="text-muted d-block text-end mt-1" *ngIf="msg.sender === 'me'">Vous</small>
+            <small class="text-muted d-block text-start mt-1" *ngIf="msg.sender !== 'me'">{{ member?.username }}</small>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer bg-white">
+      <div class="input-group">
+        <input type="text" [(ngModel)]="newMessage" placeholder="Tapez votre message..." class="form-control">
+        <button class="btn btn-primary" (click)="sendMessage()">
+          <i class="bi bi-send-fill"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

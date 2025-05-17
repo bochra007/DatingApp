@@ -1,1 +1,18 @@
-<p>messages works!</p>
+<div class="container py-5">
+  <h2 class="mb-4 text-center text-primary fw-bold">
+    💬 Vos discussions
+  </h2>
+
+  <div *ngFor="let member of members" class="card chat-item-card shadow-sm mb-3 px-3 py-2 d-flex flex-row align-items-center">
+    <img [src]="member.photoUrl || 'assets/default-profile.jpg'" alt="photo" class="rounded-circle me-3 chat-avatar">
+    
+    <div class="flex-grow-1">
+      <h5 class="mb-0">{{ member.username }}</h5>
+      <small class="text-muted"><i class="bi bi-clock me-1"></i> Dernier message il y a 2h</small> <!-- exemple -->
+    </div>
+
+    <a [routerLink]="['/chat', member.id]" class="btn btn-outline-primary btn-sm d-flex align-items-center">
+      <i class="bi bi-chat-dots-fill me-1"></i> Chat
+    </a>
+  </div>
+</div>

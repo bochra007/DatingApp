@@ -1,1 +1,22 @@
-<p>lists works!</p>
+<div class="container py-5">
+
+  <div class="form-group mb-4">
+    <input type="text" class="form-control form-control-lg shadow-sm" placeholder="🔍 Rechercher un prénom..." [(ngModel)]="searchTerm">
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div *ngFor="let user of filteredUsers" class="col">
+      <div class="card border-0 shadow like-card">
+        <img [src]="user.photoUrl || 'assets/default-profile.jpg'" class="card-img-top" [alt]="user.username">
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ user.username }}</h5>
+          <p class="text-muted small">
+            <i class="bi bi-balloon-heart-fill text-pink"></i> {{ user.age }} ans<br>
+            <i class="bi bi-geo-alt-fill text-primary"></i> {{ user.city }}, {{ user.country }}
+          </p>
+          <a [routerLink]="['/members', user.id]" class="btn btn-outline-success btn-sm">Voir profil</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

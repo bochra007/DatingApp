@@ -1,0 +1,17 @@
+.chat-item-card {
+  border-radius: 15px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #fdf7f9;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.chat-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #ffb6c1;
+}
